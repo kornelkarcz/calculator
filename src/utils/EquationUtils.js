@@ -82,7 +82,7 @@ const findPrime = (num1, num2) => {
   const start = Math.min(num1, num2);
   const end = Math.max(num1, num2);
 
-  let maxPrime = NaN;
+  let maxPrime = NaN.toString();
 
   for (let i = end; i >= start; i--) {
     if (isPrime(i)) {
