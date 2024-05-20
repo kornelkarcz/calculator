@@ -32,7 +32,7 @@ export const isOperatorPresent = (equation) => {
 }
 
 export const canBeEvaluated = (equation) => {
-  return equation.secondOperand === null || equation.secondOperand === '';
+  return equation.secondOperand !== null || equation.secondOperand !== '';
 }
 
 export const evaluate = (equation) => {
