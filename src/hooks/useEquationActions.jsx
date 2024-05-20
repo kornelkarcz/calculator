@@ -1,14 +1,13 @@
-import { useContext, useCallback } from "react";
+import { useCallback, useContext } from "react";
 import { CalculationHistoryContext } from "../context/CalculationHistoryContext.jsx";
 import { EquationInputContext } from "../context/EquationInputContext.jsx";
-import { DOT, ZERO, OPERATORS } from "../utils/Constants.js";
+import { DOT, ZERO } from "../utils/Constants.js";
 import {
   canAddChar,
   canBeEvaluated,
   evaluate,
   hasDot,
   isOperatorPresent,
-  print,
   startsWithZero
 } from "../utils/EquationUtils.js";
 
@@ -108,7 +107,7 @@ const useEquationActions = () => {
       ...prevEquation,
       result: evaluation
     }));
-    addToHistory(print(equation), evaluation);
+    addToHistory(equation, evaluation);
     setIsTyping(false);
     clearEquation();
   };

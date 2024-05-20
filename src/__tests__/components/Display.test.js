@@ -13,12 +13,6 @@ const mockEquation = {
   result: '6',
 };
 
-// const mockPrint = jest.fn(() => '5+1');
-//
-// jest.mock('../../utils/EquationUtils.js', () => ({
-//   print: () => mockPrint(),
-// }));
-
 describe('Display component', () => {
   test('Display correctly equation', () => {
     render(
@@ -34,8 +28,6 @@ describe('Display component', () => {
     const equationHolderElement = screen.getByTestId('equation-holder');
     expect(equationHolderElement).toBeInTheDocument();
     expect(equationHolderElement).toHaveTextContent('5+1');
-
-    // expect(screen.getByTestId('equation-holder')).toBeInTheDocument();
   });
 
   test('display correctly the result of equation', () => {
@@ -64,6 +56,6 @@ describe('Display component', () => {
         <Display/>
       </ModeContext.Provider>
     );
-    expect(screen.getByTestId('currency-exchange-display')).toBeInTheDocument(); // Add data-testid="currency-exchange-display" to CurrencyExchangeDisplay
+    expect(screen.getByTestId('currency-exchange-display')).toBeInTheDocument();
   });
 });

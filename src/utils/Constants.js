@@ -14,6 +14,7 @@ export const VALID_KEYS = NUMBERS.concat(
 );
 
 export const FETCH_RATES_API = "/api/rates";
+export const POST_HISTORY = "/api/history";
 
 export const initialFallbackRates = {
   USD: { EUR: 0.94, AUD: 1.56, CAD: 1.38, JPY: 154.525 },
