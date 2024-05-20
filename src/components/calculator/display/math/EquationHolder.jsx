@@ -8,7 +8,7 @@ const EquationHolder = () => {
   const { lastResult } = useContext(CalculationHistoryContext)
 
   return (
-    <div data-testid="equation-holder" className="text-right">
+    <div data-testid="equation-holder" className="text-right text-black">
       {isTyping ? print(equation) : lastResult}
     </div>
   );
