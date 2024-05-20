@@ -13,7 +13,7 @@ import {
 
 const useEquationActions = () => {
   const { addToHistory } = useContext(CalculationHistoryContext);
-  const { equation, setEquation, setIsTyping } = useContext(EquationInputContext);
+  const { equation, setEquation, isTyping, setIsTyping } = useContext(EquationInputContext);
 
   const addChar = useCallback((char) => {
     if (isOperatorPresent(equation)) {
@@ -101,6 +101,7 @@ const useEquationActions = () => {
   };
 
   const executeEvaluation = () => {
+    if (!isTyping) return;
     if (!canBeEvaluated(equation)) return;
     const evaluation = evaluate(equation);
     setEquation((prevEquation) => ({
