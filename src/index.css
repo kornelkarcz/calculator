@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .number-button {
+    @apply flex items-center justify-center h-16 w-16 m-1 rounded text-black text-3xl
+  }
+
+  .operator-button {
+    @apply flex items-center justify-center h-16 w-16 m-1 rounded text-blue-500 text-3xl
+  }
+
+  .clear-button {
+    @apply flex items-center justify-center h-16 w-16 m-1 rounded text-red-400 text-3xl
+  }
+
+  .equals-button {
+    @apply flex items-center justify-center h-12 w-32 m-1 rounded text-white bg-green-400
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
