@@ -2,12 +2,12 @@ import { useContext, useEffect } from "react";
 import { CalculationHistoryContext } from "../context/CalculationHistoryContext.jsx";
 import { ModeContext } from "../context/ModeContext.jsx";
 import { OPERATORS, VALID_KEYS } from "../utils/Constants.js";
-import { InputContext } from "../context/InputContext.jsx";
+import { EquationInputContext } from "../context/EquationInputContext.jsx";
 import useEquationActions from "./useEquationActions.jsx";
 
 const useKeyboard = () => {
   const { isCalculatorMode } = useContext(ModeContext);
-  const { equation, setEquation, _, setIsTyping } = useContext(InputContext);
+  const { equation, setEquation, _, setIsTyping } = useContext(EquationInputContext);
 
   const {
     addChar,

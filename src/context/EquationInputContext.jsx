@@ -1,8 +1,8 @@
   import { createContext, useState } from "react";
 
-  export const InputContext = createContext();
+  export const EquationInputContext = createContext();
 
-  export const InputProvider = ({ children }) => {
+  export const EquationInputProvider = ({ children }) => {
     const [equation, setEquation] = useState({
       firstOperand: '',
       secondOperand: '',
@@ -12,8 +12,8 @@
     const [isTyping, setIsTyping] = useState(false);
 
     return (
-      <InputContext.Provider value={{ equation, setEquation, isTyping, setIsTyping }}>
+      <EquationInputContext.Provider value={{ equation, setEquation, isTyping, setIsTyping }}>
         {children}
-      </InputContext.Provider>
+      </EquationInputContext.Provider>
     );
   }

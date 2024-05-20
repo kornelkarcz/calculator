@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CalculatorComponent from "./components/calculator/CalculatorComponent.jsx";
 import { ModeProvider } from "./context/ModeContext.jsx";
-import { InputProvider } from "./context/InputContext.jsx";
+import { EquationInputProvider } from "./context/EquationInputContext.jsx";
 import { CalculationHistoryProvider } from "./context/CalculationHistoryContext.jsx";
 import { CurrencyInputProvider } from "./context/CurrencyInputContext.jsx";
 
@@ -44,13 +44,13 @@ function App() {
     <ModeProvider>
       <CalculationHistoryProvider>
         <CurrencyInputProvider>
-          <InputProvider>
+          <EquationInputProvider>
             <div className="flex items-center justify-center min-h-screen bg-gray-50">
               <div className="bg-white rounded-3xl shadow-lg w-full max-w-72">
                 <CalculatorComponent/>
               </div>
             </div>
-          </InputProvider>
+          </EquationInputProvider>
         </CurrencyInputProvider>
       </CalculationHistoryProvider>
     </ModeProvider>

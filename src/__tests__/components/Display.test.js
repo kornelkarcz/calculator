@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Display from "../../components/calculator/display/Display.jsx";
 import { ModeContext } from "../../context/ModeContext.jsx";
-import { InputContext } from "../../context/InputContext.jsx";
+import { EquationInputContext } from "../../context/EquationInputContext.jsx";
 import { CalculationHistoryContext } from "../../context/CalculationHistoryContext.jsx";
 import { fireEvent } from "@testing-library/react";
 
@@ -23,11 +23,11 @@ describe('Display component', () => {
   test('Display correctly equation', () => {
     render(
       <ModeContext.Provider value={{ isCalculatorMode: true }}>
-        <InputContext.Provider value={{ equation: mockEquation, isTyping: true }}>
+        <EquationInputContext.Provider value={{ equation: mockEquation, isTyping: true }}>
           <CalculationHistoryContext.Provider value={{ lastResult: '6'}}>
             <Display/>
           </CalculationHistoryContext.Provider>
-        </InputContext.Provider>
+        </EquationInputContext.Provider>
       </ModeContext.Provider>
     );
 
@@ -41,11 +41,11 @@ describe('Display component', () => {
   test('display correctly the result of equation', () => {
     render(
       <ModeContext.Provider value={{ isCalculatorMode: true }}>
-        <InputContext.Provider value={{ equation: mockEquation, isTyping: false }}>
+        <EquationInputContext.Provider value={{ equation: mockEquation, isTyping: false }}>
           <CalculationHistoryContext.Provider value={{ lastResult: '6'}}>
             <Display/>
           </CalculationHistoryContext.Provider>
-        </InputContext.Provider>
+        </EquationInputContext.Provider>
       </ModeContext.Provider>
     );
 

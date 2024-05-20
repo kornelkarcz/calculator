@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { InputContext } from "../../../../context/InputContext.jsx";
+import { EquationInputContext } from "../../../../context/EquationInputContext.jsx";
 import { CalculationHistoryContext } from "../../../../context/CalculationHistoryContext.jsx";
 import {print} from "../../../../utils/EquationUtils.js";
 
 const EquationHolder = () => {
-  const { equation, isTyping } = useContext(InputContext);
+  const { equation, isTyping } = useContext(EquationInputContext);
   const { lastResult } = useContext(CalculationHistoryContext)
 
   return (

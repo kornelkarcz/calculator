@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { CalculationHistoryContext } from "../../../../context/CalculationHistoryContext.jsx";
-import { InputContext } from "../../../../context/InputContext.jsx";
+import { EquationInputContext } from "../../../../context/EquationInputContext.jsx";
 
 const EquationHistoryHolder = () => {
-  const { isTyping } = useContext(InputContext);
+  const { isTyping } = useContext(EquationInputContext);
   const { historyArray } = useContext(CalculationHistoryContext);
 
   return (

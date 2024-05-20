@@ -1,6 +1,6 @@
 import { useContext, useCallback } from "react";
 import { CalculationHistoryContext } from "../context/CalculationHistoryContext.jsx";
-import { InputContext } from "../context/InputContext.jsx";
+import { EquationInputContext } from "../context/EquationInputContext.jsx";
 import { DOT, ZERO, OPERATORS } from "../utils/Constants.js";
 import {
   canAddChar,
@@ -14,7 +14,7 @@ import {
 
 const useEquationActions = () => {
   const { addToHistory } = useContext(CalculationHistoryContext);
-  const { equation, setEquation, setIsTyping } = useContext(InputContext);
+  const { equation, setEquation, setIsTyping } = useContext(EquationInputContext);
 
   const addChar = useCallback((char) => {
     if (isOperatorPresent(equation)) {
